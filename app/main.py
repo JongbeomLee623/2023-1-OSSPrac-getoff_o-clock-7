@@ -22,8 +22,8 @@ def result():
         db.sort(key=lambda x: x['StudentNumber'])
         return render_template('result.html', db = db)
     
-    elif request.method=="GET":
-        return render_template('result.html')
+    # elif request.method=="GET":
+    #     return render_template('result.html')
 
 
 if __name__ == '__main__':
