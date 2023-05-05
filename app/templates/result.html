@@ -18,11 +18,25 @@
                 </tr>
             </thead>
             <tbody>
-                
+                {% for result in db %}
                 <tr>
-                  
+                    <td>{{ result['name'] }}</td>
+                    <td>{{ result['StudentNumber'] }}</td>
+                    <td>{{ result['major'] }}</td>
+                    <td>{{ result['email'] }}</td>
+                    <td>{{ result['gender'] if result['gender'] else '' }}</td>
+                    <td>
+                        {% if result['Languages'] %}
+                            {% for language in result['Languages'] %}
+                                {{ language }}
+                            {% endfor %}
+                        {% else %}
+                        <!-- No languages selected-->
+                        {% endif %}
+                    </td>
+                    <td><input type="checkbox" name="delete" value="{{ i }}"></td>
                 </tr>
-               
+                {% endfor %}
             </tbody>
         </table>
     </form>
