@@ -21,10 +21,11 @@ def result():
             db.append(data)
         db.sort(key=lambda x: x['StudentNumber'])
         return render_template('result.html', db = db)
-    
-    elif request.method=="GET":
-        return render_template('result.html')
 
+@app.route('/home')
+def home():
+    db.clear()
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True,port=8000)
