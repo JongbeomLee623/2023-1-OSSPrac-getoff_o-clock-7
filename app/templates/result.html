@@ -4,7 +4,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST">
+    <form method="POST" action="/delete">
         <table border="1">
             <thead>
                 <tr>
@@ -34,16 +34,16 @@
                         <!-- No languages selected-->
                         {% endif %}
                     </td>
-                    <td><input type="checkbox" name="delete" value="{{ i }}"></td>
+                    <td><input type="checkbox" name="delete" value="{{ loop.index }}"  ></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+
+        <button type="submit" name="action_btn" value="delete_row" style="float:left">Delete row</button> 
     </form>
-    
-    <button>delete row</button>
-    <button onclick="location.href='/'">add row</button>
+    <button onclick="location.href='/'" style="float:left" >Add row</button>
     <br>
-    <button onclick="location.href='/home'">home</button>
+    <button onclick="location.href='/home'">Home</button>
 </body>
 </html>
