@@ -1,0 +1,9 @@
+version: '2.0'
+services:
+  osspteam_flask:
+    build: .
+    image: 'baranjeigh/ossp_team:0.2'
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
