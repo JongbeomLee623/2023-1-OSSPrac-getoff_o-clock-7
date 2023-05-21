@@ -1,0 +1,9 @@
+version: '2.0'
+services:
+  osspteam:
+    build: .
+    image: jambon23/ossp:3.0
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
