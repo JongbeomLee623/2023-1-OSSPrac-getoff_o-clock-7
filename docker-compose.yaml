@@ -1,8 +1,8 @@
 version: '2.0'
 services:
-  osspteam:
+  osspteam_flask:
     build: .
-    image: jambon23/ossp:3.0
+    image: 'baranjeigh/ossp_team:3.0'
     ports:
       - target: 80
         published: 80
