@@ -1,8 +1,8 @@
 version: '2.0'
 services:
-  osspteam_flask:
+  osspteam_7_jenkins:
     build: .
-    image: 'baranjeigh/ossp_team:3.0'
+    image: '${DOCKER_USR}/ossp_team:3.0'
     ports:
       - target: 80
         published: 80
