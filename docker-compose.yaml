@@ -4,6 +4,4 @@ services:
     build: .
     image: '${DOCKER_USR}/ossp_team:3.0'
     ports:
-      - target: 80
-        published: 80
-        protocol: tcp
+      - "80:80/tcp"
